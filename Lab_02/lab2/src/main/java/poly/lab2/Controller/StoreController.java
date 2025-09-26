@@ -14,7 +14,7 @@ public class StoreController {
         return "store";
     }
 
-    @PostMapping("/product/save")
+    @PostMapping("/store/save")
     public String save(@ModelAttribute("product") StoreProduct product , Model model) {
         model.addAttribute("product", product);
         return "store";
