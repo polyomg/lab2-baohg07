@@ -16,12 +16,7 @@ public class ParamController {
     }
 
     @RequestMapping("/param/save/{x}")
-    public String save(
-            @PathVariable("x") String x,   // lấy từ URL
-            @RequestParam("y") String y,   // lấy từ input form
-            Model model) {
-
-        // đưa dữ liệu ra view
+    public String save(@PathVariable("x") String x, @RequestParam(value = "y" , defaultValue = "0") String y, Model model) {
         model.addAttribute("x", x);
         model.addAttribute("y", y);
 
