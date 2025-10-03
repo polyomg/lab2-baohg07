@@ -34,4 +34,17 @@ public class staffController {
         model.addAttribute("list", list);
         return "/staff-list";
     }
+
+    @RequestMapping("/staff/list2")
+    public String list2(Model model) {
+        List<staff> list = List.of(
+                staff.builder().id("user1@gmail.com").fullname("nguyễn văn user1").level(0).build(),
+                staff.builder().id("user2@gmail.com").fullname("nguyễn văn user2").level(1).build(),
+                staff.builder().id("user3@gmail.com").fullname("nguyễn văn user3").level(2).build(),
+                staff.builder().id("user4@gmail.com").fullname("nguyễn văn user4").level(2).build(),
+                staff.builder().id("user5@gmail.com").fullname("nguyễn văn user5").level(1).build(),
+                staff.builder().id("user6@gmail.com").fullname("nguyễn văn user6").level(0).build());
+        model.addAttribute("list", list);
+        return "/table";
+    }
 }
