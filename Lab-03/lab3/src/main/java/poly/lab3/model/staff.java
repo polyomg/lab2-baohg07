@@ -7,21 +7,26 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
+@Data
 public class staff {
     private String id;
     private String fullname;
-    @
-    private String photo = "photo.jpg";
+
+    @Builder.Default
+    private String photo = "img.png";
+
     @Builder.Default
     private Boolean gender = true;
-    @Default
+
+    @Builder.Default
     private Date birthday = new Date();
-    @Default
+
+    @Builder.Default
     private Double salary = 12345.6789;
-    @Default
+
+    @Builder.Default
     private Integer level = 0;
 }
